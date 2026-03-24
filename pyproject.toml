@@ -1,0 +1,30 @@
+[project]
+name = "thermal-management-g1"
+version = "0.1.0"
+description = "Unitree G1 joint thermal LSTM: collect, train, export (see plan.md)"
+readme = "plan.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.24",
+  "torch>=2.0",
+  "h5py>=3.10",
+  "pyarrow>=14.0",
+  "pyyaml>=6.0",
+]
+
+# unitree_sdk2_python: install from Unitree SDK per plan Phase 0
+# Optional: Python-side ONNX smoke test — `uv sync --group infer`
+[dependency-groups]
+dev = ["pytest>=7.0", "ruff>=0.1.0"]
+infer = ["onnxruntime>=1.17.0"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]

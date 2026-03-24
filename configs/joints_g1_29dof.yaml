@@ -1,0 +1,39 @@
+# G1 29DOF 关节索引 (plan §3.1)；邻接用于局部耦合特征
+joint_index:
+  num_motors: 29
+  indices: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28]
+  joints:
+    - {i: 0, name: LeftHipPitch, motor: GearboxM}
+    - {i: 1, name: LeftHipRoll, motor: GearboxM}
+    - {i: 2, name: LeftHipYaw, motor: GearboxM}
+    - {i: 3, name: LeftKnee, motor: GearboxL}
+    - {i: 4, name: LeftAnklePitch, motor: GearboxS}
+    - {i: 5, name: LeftAnkleRoll, motor: GearboxS}
+    - {i: 6, name: RightHipPitch, motor: GearboxM}
+    - {i: 7, name: RightHipRoll, motor: GearboxM}
+    - {i: 8, name: RightHipYaw, motor: GearboxM}
+    - {i: 9, name: RightKnee, motor: GearboxL}
+    - {i: 10, name: RightAnklePitch, motor: GearboxS}
+    - {i: 11, name: RightAnkleRoll, motor: GearboxS}
+    - {i: 12, name: WaistYaw, motor: GearboxM}
+    - {i: 13, name: WaistRoll, motor: GearboxS}
+    - {i: 14, name: WaistPitch, motor: GearboxS}
+    - {i: 15, name: LeftShoulderPitch, motor: GearboxS}
+    - {i: 16, name: LeftShoulderRoll, motor: GearboxS}
+    - {i: 17, name: LeftShoulderYaw, motor: GearboxS}
+    - {i: 18, name: LeftElbow, motor: GearboxS}
+    - {i: 19, name: LeftWristRoll, motor: GearboxS}
+    - {i: 20, name: LeftWristPitch, motor: GearboxS}
+    - {i: 21, name: LeftWristYaw, motor: GearboxS}
+    - {i: 22, name: RightShoulderPitch, motor: GearboxS}
+    - {i: 23, name: RightShoulderRoll, motor: GearboxS}
+    - {i: 24, name: RightShoulderYaw, motor: GearboxS}
+    - {i: 25, name: RightElbow, motor: GearboxS}
+    - {i: 26, name: RightWristRoll, motor: GearboxS}
+    - {i: 27, name: RightWristPitch, motor: GearboxS}
+    - {i: 28, name: RightWristYaw, motor: GearboxS}
+  neighbor_map:
+    22: [23, 24]
+    25: [22, 26]
+    12: [13, 14]
+    3: [2, 4]

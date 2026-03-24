@@ -1,0 +1,9 @@
+{
+  "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
+  "name": "thermal-infer",
+  "version-string": "0.1.0",
+  "description": "G1 thermal ONNX Runtime inference (plan §7)",
+  "dependencies": [
+    "onnxruntime"
+  ]
+}

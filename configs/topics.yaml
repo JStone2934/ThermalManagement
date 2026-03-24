@@ -1,0 +1,5 @@
+# DDS Topic 名称；实机以 Phase 0 嗅探为准 (plan §1.2 / §8)
+topics:
+  lowstate: "rt/lowstate"
+  mainboardstate: "rt/mainboardstate"
+  bmsstate: "rt/bmsstate"

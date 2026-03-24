@@ -1,0 +1,33 @@
+# Align with plan.md V2.0 — override per machine/session.
+# DDS topic 字符串见 configs/topics.yaml（加载时与本文合并）。
+
+g1:
+  num_motors: 29
+  motor_indices: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28]
+
+sampling:
+  control_hz: 500
+  record_hz: 20
+
+preprocess:
+  ema_alpha: 0.05
+
+sequence:
+  L: 100
+  H: 10
+
+model:
+  input_dim: 10
+  proj_dim: 48
+  lstm_hidden: 96
+  lstm_layers: 2
+  dropout: 0.15
+
+training:
+  batch_size: 128
+  max_epochs: 200
+  early_stop_patience: 15
+  lr: 0.001
+  weight_decay: 0.0001
+  grad_clip: 1.0
+  loss_shell_lambda: 0.3

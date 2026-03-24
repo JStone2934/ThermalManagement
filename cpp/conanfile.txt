@@ -1,0 +1,8 @@
+# Conan 2: 在 cpp/ 下执行 `conan install . --output-folder=build --build=missing`
+# 然后 CMake 带上 toolchain（见 README.build.txt）
+[requires]
+onnxruntime/1.17.3
+
+[generators]
+CMakeDeps
+CMakeToolchain

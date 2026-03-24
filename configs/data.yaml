@@ -1,0 +1,7 @@
+# 原始会话 → HDF5；训练管线 → Parquet（两者并存，plan §5）
+storage:
+  raw_hdf5_dir: "data/raw"
+  processed_parquet_dir: "data/processed"
+  interim_dir: "data/interim"
+  raw_filename_pattern: "{date}_{round}_{phase}.h5"
+  parquet_dataset_name: "thermal_g1_sessions"

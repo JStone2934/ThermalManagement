@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Data & artifacts (plan §5: HDF5/Parquet; §7: ONNX)
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+data/interim/*
+!data/interim/.gitkeep
+*.h5
+*.hdf5
+*.parquet
+checkpoints/
+runs/
+*.onnx
+*.engine
+*.trt
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+
+# C++ build
+cpp/build/
+cpp/**/build/
